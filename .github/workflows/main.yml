@@ -36,6 +36,7 @@ jobs:
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
+          apt-get -y install python2-dev python2
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash         
           
       - name: Install Repo
@@ -52,8 +53,6 @@ jobs:
           # repo sync -l --no-clone-bundle
           mkdir friendlywrt-h3
           cd friendlywrt-h3
-          sudo rm -rf /usr/bin/python
-          sudo ln -s /usr/bin/ptyhon2.7 /usr/bin/python
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
           repo init -u https://github.com/friendlyarm/friendlywrt_manifests -b master-v19.07.1 -m h3.xml --repo-url=https://github.com/friendlyarm/repo
