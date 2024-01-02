@@ -46,7 +46,7 @@ jobs:
       - name: Download Source
         run: |
           wget https://xoff.cn/friendlywrt-h3-20200417.tar
-          tar xvf /path/to/netdisk/sources/friendlywrt-h3-20200417.tar
+          tar xvf friendlywrt-h3-20200417.tar
           cd friendlywrt-h3
           repo sync -l --no-clone-bundle
           # mkdir friendlywrt-h3
