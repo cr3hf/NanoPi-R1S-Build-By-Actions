@@ -44,11 +44,16 @@ jobs:
           sudo ln -sf python2.7 python
           python -V
           python -c "import sys; print sys.getdefaultencoding()"
-          python -c "import sys; print sys.setdefaultencoding('utf-8')"
-          python -c "import sys; print sys.getdefaultencoding()"
+          # python -c "import sys; print sys.setdefaultencoding('utf-8')"
+          # python -c "import sys; print sys.getdefaultencoding()"
+          sudo mkdir -p /usr/lib/python2.7/site-packages/
           sudo touch /usr/lib/python2.7/site-packages/sitecustomize.py
           sudo echo "import sys" >> /usr/lib/python2.7/site-packages/sitecustomize.py
           sudo echo "sys.setdefaultencoding('utf-8')" >> /usr/lib/python2.7/site-packages/sitecustomize.py
+
+          python -c "import sys; print sys.getdefaultencoding()"
+          apt-get install python2.7
+          
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash  
           
       - name: Install Repo
