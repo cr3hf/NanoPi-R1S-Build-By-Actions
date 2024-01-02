@@ -53,7 +53,7 @@ jobs:
           sudo echo "sys.setdefaultencoding('utf-8')" >> /usr/lib/python2.7/site-packages/sitecustomize.py
 
           python -c "import sys; print sys.getdefaultencoding()"
-          apt-get install python2.7
+          #apt-get install python2.7
           
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash  
           
