@@ -35,10 +35,10 @@ jobs:
       - name: Initialization Environment
         env:
           DEBIAN_FRONTEND: noninteractive
-        run: |
-          wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash         
+        run: |       
           python -V
           apt-get -y install python2-dev python2
+          wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash  
           
       - name: Install Repo
         run: |
