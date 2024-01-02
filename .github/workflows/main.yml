@@ -42,6 +42,8 @@ jobs:
           cd /usr/bin
           sudo ln -sf python2.7 python
           python -V
+          sudo echo "import sys" >> /usr/lib/python2.7/site-packages/sitecustomize.py
+          sudo echo "sys.setdefaultencoding('utf-8')" >> /usr/lib/python2.7/site-packages/sitecustomize.py
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash  
           
       - name: Install Repo
