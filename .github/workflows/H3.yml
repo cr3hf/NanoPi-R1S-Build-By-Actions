@@ -46,7 +46,8 @@ jobs:
       - name: Download Source
         run: |
           # mkdir friendlywrt-h3
-          curl -H "Authorization: Bearer ya29.a0AfB_byB67EntGNcpigL__A34BvW0ZO2s0g-RgbFCphiAZEzfd3mDIZzqpFbQlxOvrFGIKOVOrLKIHbs77B7qAToL0c4tTdHqEAbxs6ImH4H3Gn0EMurmVFuDVkJO5s3G5XL2XTOOAfOT-vPjYIAUpF8rXiDkXv-yNwQIaCgYKAZgSARISFQHGX2Mi-fjGWIjlHsKDXU-gPjSwOg0171" https://www.googleapis.com/drive/v3/files/1gC50sVxdVH7p_7xHRix64lh1aINmAlSu?alt=media -o friendlywrt-h3-20200417.tar
+          # curl -H "Authorization: Bearer ya29.a0AfB_byB67EntGNcpigL__A34BvW0ZO2s0g-RgbFCphiAZEzfd3mDIZzqpFbQlxOvrFGIKOVOrLKIHbs77B7qAToL0c4tTdHqEAbxs6ImH4H3Gn0EMurmVFuDVkJO5s3G5XL2XTOOAfOT-vPjYIAUpF8rXiDkXv-yNwQIaCgYKAZgSARISFQHGX2Mi-fjGWIjlHsKDXU-gPjSwOg0171" https://www.googleapis.com/drive/v3/files/1gC50sVxdVH7p_7xHRix64lh1aINmAlSu?alt=media -o friendlywrt-h3-20200417.tar
+          wget https://xoff.cn/friendlywrt-h3-20200417.tar
           tar xvf /path/to/netdisk/sources/friendlywrt-h3-20200417.tar
           cd friendlywrt-h3
           repo sync -l --no-clone-bundle
