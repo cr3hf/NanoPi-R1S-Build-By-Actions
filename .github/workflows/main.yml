@@ -36,7 +36,6 @@ jobs:
         env:
           DEBIAN_FRONTEND: noninteractive
         run: |
-          alias python=/usr/local/bin/python2.7
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash         
           
       - name: Install Repo
