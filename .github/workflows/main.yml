@@ -37,11 +37,14 @@ jobs:
           DEBIAN_FRONTEND: noninteractive
         run: |       
           python -V
+          python -c "import sys; print sys.getdefaultencoding()"
           sudo apt-get update
           sudo apt-get install python2.7
           cd /usr/bin
           sudo ln -sf python2.7 python
           python -V
+          python -c "import sys; print sys.getdefaultencoding()"
+          
           sudo touch /usr/lib/python2.7/site-packages/sitecustomize.py
           sudo echo "import sys" >> /usr/lib/python2.7/site-packages/sitecustomize.py
           sudo echo "sys.setdefaultencoding('utf-8')" >> /usr/lib/python2.7/site-packages/sitecustomize.py
