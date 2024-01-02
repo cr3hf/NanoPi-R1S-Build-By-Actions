@@ -48,7 +48,7 @@ jobs:
           # python -c "import sys; print sys.getdefaultencoding()"
           sudo mkdir -p /usr/lib/python2.7/site-packages/
           sudo touch /usr/lib/python2.7/site-packages/sitecustomize.py
-          sudo chmod 777 sitecustomize.py
+          sudo chmod 777 /usr/lib/python2.7/site-packages/sitecustomize.py
           sudo echo "import sys" >> /usr/lib/python2.7/site-packages/sitecustomize.py
           sudo echo "sys.setdefaultencoding('utf-8')" >> /usr/lib/python2.7/site-packages/sitecustomize.py
 
