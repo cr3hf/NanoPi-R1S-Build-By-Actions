@@ -49,10 +49,7 @@ jobs:
           tar xvf friendlywrt-h3-20200417.tar
           cd friendlywrt-h3
           repo sync -l --no-clone-bundle
-          # mkdir friendlywrt-h3
-          # cd friendlywrt-h3
-          # repo init -u https://github.com/friendlyarm/friendlywrt_manifests -b master -m h3.xml --repo-url=https://github.com/friendlyarm/repo  --no-clone-bundle
-      
+
       - name: Merge UpStearm OpenWrt
         run: |
           cd friendlywrt-h3
