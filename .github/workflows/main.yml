@@ -64,28 +64,22 @@ jobs:
           
       - name: Download Source
         run: |
-          # friendlywrt-h3-20200417.tar
-          # wget https://xoff.cn/friendlywrt-h3-20200417.tar
-          # tar xvf friendlywrt-h3-20200417.tar
-          # cd friendlywrt-h3
-          # repo sync -l --no-clone-bundle
           mkdir friendlywrt-h3
           cd friendlywrt-h3
           git config --global user.email "you@example.com"
           git config --global user.name "Your Name"
           repo init -u https://github.com/friendlyarm/friendlywrt_manifests -b master-v19.07.1 -m h3.xml --repo-url=https://github.com/friendlyarm/repo
-          # repo init -u https://github.com/friendlyarm/friendlywrt_manifests -b master -m h3.xml --repo-url=https://github.com/friendlyarm/repo  --no-clone-bundle
       
       - name: Merge UpStearm OpenWrt
         run: |
-          cd friendlywrt-h3
-          cd .repo/manifests
-          rm -f ./h3.xml
-          # wget https://raw.githubusercontent.com/skytotwo/NanoPi-R1S-Build-By-Actions/master/source_xml/h3_19.07.xml
-          wget https://github.com/cr3hf/NanoPi-R1S-Build-By-Actions/edit/master/source_xml/h3_19.07.xml
-          cp h3_19.07.xml h3.xml
-          rm -rf ./h3_19.07.xml
-          repo sync -c  --no-clone-bundle
+          # cd friendlywrt-h3
+          # cd .repo/manifests
+          # rm -f ./h3.xml
+          # # wget https://raw.githubusercontent.com/skytotwo/NanoPi-R1S-Build-By-Actions/master/source_xml/h3_19.07.xml
+          # wget https://github.com/cr3hf/NanoPi-R1S-Build-By-Actions/edit/master/source_xml/h3_19.07.xml
+          # cp h3_19.07.xml h3.xml
+          # rm -rf ./h3_19.07.xml
+          # repo sync -c  --no-clone-bundle
       
       - name: Merge LEDE
         run: |
