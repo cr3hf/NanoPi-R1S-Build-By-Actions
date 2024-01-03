@@ -136,6 +136,10 @@ jobs:
       - name: Build OpenWrt
         run: |
           cd friendlywrt-h3
+          cd scripts
+          rm -f build.sh
+          wget https://raw.githubusercontent.com/cr3hf/NanoPi-R1S-Build-By-Actions/master/build.sh
+          cd ..
           # ./build.sh nanopi_r1s.mk
           ./build.sh nanopi_r1s_h3.mk
       
