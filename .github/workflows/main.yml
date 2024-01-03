@@ -66,10 +66,11 @@ jobs:
         run: |
           mkdir friendlywrt-h3
           cd friendlywrt-h3
-          git config --global user.email "you@example.com"
-          git config --global user.name "Your Name"
+          git config --global user.email "cr_3@163.com"
+          git config --global user.name "cr"
           repo init -u https://github.com/friendlyarm/friendlywrt_manifests -b master-v19.07.1 -m h3.xml --repo-url=https://github.com/friendlyarm/repo
-      
+          cd friendlywrt
+          
       - name: Merge UpStearm OpenWrt
         run: |
           # cd friendlywrt-h3
