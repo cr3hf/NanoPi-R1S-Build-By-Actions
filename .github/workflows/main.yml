@@ -124,7 +124,7 @@ jobs:
           gcc --version
           cd friendlywrt-h3/friendlywrt
           # make download -j8
-          make download -j1 V=s
+          make download -j1 V=s FORCE=1
           find dl -size -1024c -exec ls -l {} \;
           find dl -size -1024c -exec rm -f {} \;
           
