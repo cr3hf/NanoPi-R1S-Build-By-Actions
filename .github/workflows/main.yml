@@ -55,8 +55,8 @@ jobs:
 
           python -c "import sys; print sys.getdefaultencoding()"
           #apt-get install python2.7
-          
           wget -O - https://raw.githubusercontent.com/friendlyarm/build-env-on-ubuntu-bionic/master/install.sh | bash  
+          sudo apt-get install u-boot-tools
           
           git config --global user.email "cr_3@163.com"
           git config --global user.name "cr"
