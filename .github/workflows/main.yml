@@ -37,8 +37,8 @@ jobs:
           DEBIAN_FRONTEND: noninteractive
         run: |       
           python -V
-          gcc -dumpversion
-          python -c "import sys; print sys.getdefaultencoding()"
+          # gcc -dumpversion
+          # python -c "import sys; print sys.getdefaultencoding()"
           sudo apt-get update
           sudo apt-get install python2.7
           cd /usr/bin
