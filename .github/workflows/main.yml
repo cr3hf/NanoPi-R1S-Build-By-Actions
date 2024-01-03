@@ -123,8 +123,11 @@ jobs:
         run: |
           gcc --version
           cd friendlywrt-h3/friendlywrt
+          cd include
+          rm -f prereq-build.mk
+          wget https://raw.githubusercontent.com/cr3hf/NanoPi-R1S-Build-By-Actions/master/prereq-build.mk
           # make download -j8
-          make download -j1 V=s FORCE=1
+          make download -j1 V=s
           find dl -size -1024c -exec ls -l {} \;
           find dl -size -1024c -exec rm -f {} \;
           
